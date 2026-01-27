@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista Nominal Visualizador</title>
+</head>
+
+<body>
+
+    <body id="topo"></body>
+    <a href="#topo" class="btn-voltar">▲</a>
+
+    <h1>Indicador de Qualidade</h1>
+    <h2>Lista nominal</h2>
+    <input type="file" id="arquivo" accept=".csv,.xlsx" />
+
+    <div id="filtro-equipe" style="display:none;">
+        <label for="select-equipe">Equipe:</label>
+        <select id="select-equipe">
+            <option value="">Todas</option>
+        </select>
+    </div>
+
+    <p id="info"></p>
+    <div id="indicadores"></div>
+
+    <p id="dicionario"></p>
+    <a id="bnt"" href=" #" style="display: none;">Exibir lista nominal</a>
+
+    <div id="filtro" style="display: none;">
+        <label for="filtro-texto">Buscar:</label>
+        <input type="text" id="filtro-texto" placeholder="CPF ou CNS"/>
+        <label for="filtro-indicador">Filtrar por indicador:</label>
+        <select id="filtro-indicador">
+            <option value="">Todos</option>
+        </select>
+
+        <label for="filtro-status">Status:</label>
+        <select id="filtro-status">
+            <option value="todos">Todos</option>
+            <option value="vazio">Não atingiu</option>
+            <option value="atingiu">Atingiu</option>
+        </select>
+
+        
+    </div>
+    <pre id="tabela" style="display: none;"></pre>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script-csv.js"></script>
+    <script src="script-xlsx.js"></script>
+</body>
+
+</html>
